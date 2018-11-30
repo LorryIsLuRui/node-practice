@@ -1,13 +1,13 @@
 //  大部分 fs 操作接受字符串、Buffer、或使用 file: 协议的 URL 对象作为文件路径。
 //  字符串形式的路径会被解释为表示绝对路径或相对路径的 UTF-8 字符序列。 相对路径会相对于 process.cwd() 定义的当前工作目录进行处理。
 // 对于大多数 fs 模块的函数，path 或 filename 参数可以传入 WHATWG URL 对象。 只支持使用 file: 协议的 URL 对象。
-            // const fs = require('fs');
-            // const fileUrl = new URL('file:///tmp/hello');   //file: URL 必须是绝对路径
-            // fs.readFileSync(fileUrl);
-const fs=require('fs');
-console.log(fs.readFileSync('./test1.txt','utf8'));
-const fd=fs.openSync('./test1.txt','r+');
-fs.truncateSync(fd,2);
+// const fs = require('fs');
+// const fileUrl = new URL('file:///tmp/hello');   //file: URL 必须是绝对路径
+// fs.readFileSync(fileUrl);
+const fs = require('fs');
+console.log(fs.readFileSync('./test1.txt', 'utf8'));
+const fd = fs.openSync('./test1.txt', 'r+');
+fs.truncateSync(fd, 2)
 // fs.ftruncate(fd,9,err=>{
 //     if(err) throw err;
 //     console.log(fs.readFileSync('./test1.txt','utf8'));
